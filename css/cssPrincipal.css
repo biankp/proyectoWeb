@@ -1,0 +1,159 @@
+header{
+  background: black;
+  width: 100%;
+  height : 162px ;
+  position: fixed;
+}
+footer{
+  background: black;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+#imgHeader{
+  height: 150px; 
+  width: 250px; 
+}
+#divH{
+  height: 150px; 
+  width: 250px; 
+}
+#general{
+  margin-left: 200px
+}
+.labelR{
+  font-size: 15px;
+  color: black;
+  font-family: 'Amaranth';
+}
+.labelName{
+  color: #4BA07F;
+  font-size: 25px;
+  font-family: 'Abril Fatface';
+  background-color: black;
+  border-color: black;
+
+}
+button a{
+  color: #4BA07F;
+}
+.imgPerfil{
+  padding: 30px;
+  height: 200px;
+  width: 200px;
+}
+.divPerfil{
+  float: left;
+  margin-left: 100px;
+  background-color: #E5E5E5;
+  height: 250px;
+  width: 300px;
+}
+.letraPerfil{
+  color: black;
+  font-size: 13px;
+
+}
+.letraPerfil2{
+  color: black;
+  padding-left: 40px;
+  font-size: 13px
+}
+.letraPerfil3{
+  color: black;
+  padding-left: 60px;
+  font-size: 13px
+}
+.letraPerfil4{
+  color: black;
+  padding-left: 90px;
+  font-size: 13px
+}
+.letraPerfil5{
+  color: black;
+  padding-left: 10px;
+  font-size: 13px
+}
+.letraPerfil7{
+  color: black;
+  padding-left: 20px;
+  font-size: 13px
+}
+.letraPerfil6{
+  color: black;
+  padding-left: 100px;
+  font-size: 13px
+}
+.letraPerfil8{
+  color: black;
+  padding-left: 108px;
+  font-size: 13px
+}
+.letraPerfil9{
+  color: black;
+  padding-left: 28px;
+  font-size: 13px
+}
+.tituloPerfil{
+  color: black;
+  font-size: 15px;
+  padding:10px;
+
+}
+
+.menuProducts{
+  float: right;
+  margin-top: 10px;
+}
+
+.product{
+  width:1080px;
+  height:auto;
+  position:relative;
+  margin:auto;
+}
+
+.product2{
+  width:250px;
+  height:360px;
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: gray;
+  position:relative;
+  display:inline-block;
+  vertical-align:top;
+  overflow:hidden;
+}
+.divU{
+  background-color: white;
+}
+.ocultarB{
+  display: none;
+}
+
+.product3{
+  width:250px;
+  height:200px;
+  position:relative;
+  display:inline;
+  margin-left: 12px;
+  margin-top: 25px;
+}
+
+.ima{
+  width:200px;
+  height:200px;
+  position:relative;
+  display:inline;
+  margin-left: 12px;
+  margin-top: 25px;
+}
+
+.texto{
+height:auto;
+margin-left: 25px;
+}

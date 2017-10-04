@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Perfil</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="css/cssPrincipal.css">
+  	<link rel="stylesheet" type="text/css" href="css/materialize.css">
+  	<link rel="stylesheet" type="text/css" href="css/materialize.css">
+ 	<script src="js/materialize.js" type="text/javascript"></script>
+  	<script src="js/javas.js" type="text/javascript"></script>
+  	<script src="js/materialize.min.js" type="text/javascript"></script>
+  	<style>
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+</style>
+</head>
+<body>
+	 <div id="divH">
+    <header>
+        <img src="img/logo.png" id="imgHeader">
+        <!--This label has the name user in section-->
+        <button class="labelName"><a href="" id="userName"></a></button>
+        <button class="labelName" id="des" onclick="desactivarCuenta()">Desactivar Cuenta</button>
+     </header>
+  </div>
+    <div>
+    <!--show the user profile-->
+      <img src="img/perfil.jpg" class="imgPerfil">
+      <br>
+      <div id="general">
+      <div class="divPerfil" ">
+        <label class="tituloPerfil" >Nombre Completo:</label>
+        <label id="nombre" class="letraPerfil5"></label>
+        <br>
+        <br>
+         <label class="tituloPerfil">Nombre de usuario:</label>
+        <label id="nombreU"  class="letraPerfil5"></label>
+        <br>
+        <br>
+        <label class="tituloPerfil">Contraseña:</label>
+        <label id="password"  class="letraPerfil3"></label>
+        <br>
+        <br>
+         <label class="tituloPerfil">Cédula:</label>
+        <label id="cedula"  class="letraPerfil4"></label>
+        <br>
+        <br>
+         <label class="tituloPerfil" id="e"></label>
+        <label id="edad"  class="letraPerfil6"></label>
+        <br>
+        <br>
+         <label class="tituloPerfil" id="c"></label>
+        <label id="correo"  class="letraPerfil4"></label>
+        <br>
+        <br>
+      </div>
+      <div class="divPerfil" " id="parte2">
+         <label id="d" class="tituloPerfil"  ></label>
+        <label id="direccion"  class="letraPerfil4"></label>
+        <br>
+        <br>
+         <label id="t" class="tituloPerfil" ></label>
+        <label id="telefono"  class="letraPerfil4"></label>
+        <br>
+        <br>
+         <label id="ta" class="tituloPerfil" ></label>
+        <label id="tarjeta"  class="letraPerfil9"></label>
+        <br>
+        <br>
+         <label id="co" class="tituloPerfil" ></label>
+        <label id="codigo"  class="letraPerfil8"></label>
+        <br>
+        <br>
+         <label id="fe" class="tituloPerfil" ></label>
+        <label id="fechaa"  class="letraPerfil5"></label>
+        <br>
+        <br>
+    </div>
+  </div>
+  </div>
+  <!--<a  class="waves-effect waves-light btn modal-trigger" id="des" onclick="desactivarCuenta()">Desactivar Cuenta</a>-->
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="editar" onclick="cargarInfo(document.getElementById('nameId'), document.getElementById('userId'),document.getElementById('passId'),document.getElementById('cedId'),document.getElementById('ageId'),document.getElementById('emailId'),document.getElementById('dirId'),document.getElementById('telId'), document.getElementById('numId'),document.getElementById('codId'),document.getElementById('dateId'))" ></a>
+  <div id="modal1" class="modal">
+  <div class="modal-context" style="background-color: #F2FFFA  ">
+     <h2 style="font-family: 'Fredoka One'">Editar información*</h2>
+     <label class="labelR">Nombre Completo</label>
+     <input type="text" name="Name" id="nameId">
+     <label class="labelR">Nombre de usuario </label>
+     <input type="text" name="NameU" id="userId">
+      <label class="labelR">Contraseña</label>
+     <input type="text" name="Pass" id="passId">
+      <label class="labelR">Cédula</label>
+     <input type="text" name="Ced" id="cedId">
+      <label class="labelR">Edad</label>
+     <input type="text" name="Eda" id="ageId">
+      <label class="labelR">Correo Electronico</label>
+     <input type="text" name="Correo" id="emailId">
+     <label class="labelR">Dirección</label>
+     <input type="text" name="Dir" id="dirId">
+     <label class="labelR">Telefono</label>
+     <input type="text" name="Tel" id="telId">
+     <label class="labelR">Número de tarjeta</label>
+     <input type="text" name="NumT" id="numId">
+     <label class="labelR">Código de seguridad</label>
+     <input type="text" name="Cod" id="codId">
+      <label class="labelR">Fecha de vencimiento</label>
+     <input type="text" name="Fecha" id="dateId">
+     <script type="text/javascript">
+     </script>
+  </div>
+   <div class="modal-footer"><!--If press the button, this call function save()-->
+      <button onclick="editarInfo( document.getElementById('nameId'), document.getElementById('userId'),document.getElementById('passId'),document.getElementById('cedId'),document.getElementById('ageId'),document.getElementById('emailId'),document.getElementById('dirId'),document.getElementById('telId'), document.getElementById('numId'),document.getElementById('codId'),document.getElementById('dateId'))"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="width: 160px">Cambiar</a></button>
+    </div>
+  </div>
+	<script type="text/javascript">
+    $(document).ready(function(){//call the id modal1
+        $('#modal1').modal();
+    });
+    verificarU(document.getElementById('userName'));
+    cargarPerfil(document.getElementById('nombre'),document.getElementById('nombreU'),document.getElementById('password'),document.getElementById('cedula'),document.getElementById('edad'),document.getElementById('correo'),document.getElementById('direccion'),document.getElementById('telefono'),document.getElementById('tarjeta'),document.getElementById('codigo'),document.getElementById('fechaa'),document.getElementById('e'),document.getElementById('c'),document.getElementById('d'),document.getElementById('t'),document.getElementById('ta'),document.getElementById('co'),document.getElementById('fe'), document.getElementById('editar'),'parte2','des');
+
+
+
+
+
+	</script>
+	<div>
+    <footer>@Copyright</footer>
+  </div>
+</body>
+</html>

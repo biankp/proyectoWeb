@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inicio</title>
+  <!--This section import files -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/cssPrincipal.css">
+  <link rel="stylesheet" type="text/css" href="css/materialize.css">
+  <link rel="stylesheet" type="text/css" href="css/materialize.css">
+  <script src="js/materialize.js" type="text/javascript"></script>
+  <script src="js/javas.js" type="text/javascript"></script>
+  <script src="js/materialize.min.js" type="text/javascript"></script>
+  <style>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Amaranth');
+  </style>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+  </style>
+  </style>
+
+</head>
+<body>
+  <!--Header of web page-->
+  <div id="divH">
+    <header>
+        <img src="img/logo.png" id="imgHeader">
+    </header>
+  </div>
+  <div class="container">
+    <div class="row">
+        <div class="col m6">
+        </div>
+        <div class="col m6">
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Username</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="pass" type="password" class="validate">
+                            <label for="pass">Password</label>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="row">
+                        <div class="col m12">
+                            <p class="right-align">
+                                <button id="login" class="btn btn-large waves-effect waves-light" type="button" name="action" onclick="check()">Login</button>
+                                  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Registrarse</a>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--This section shows the register of user. Implement MATERIALIZE for show a emergent window-->
+  
+  <div id="modal1" class="modal">
+  <div class="modal-context" style="background-color: #F2FFFA  ">
+     <h2 style="font-family: 'Fredoka One'">Nota*</h2>
+     <pre style="color: red">Si usted es usuario vendedor por favor solo llene los primeros 5 campos</pre>
+     <label class="labelR">Nombre Completo</label>
+     <input type="text" name="Name" id="nameId">
+     <label class="labelR">Nombre de usuario </label>
+     <input type="text" name="NameU" id="userId">
+      <label class="labelR">Contraseña</label>
+     <input type="text" name="Pass" id="passId">
+      <label class="labelR">Cédula</label>
+     <input type="text" name="Ced" id="cedId">
+      <label class="labelR">Tipo de usuario... Digite V(Vendedor) ó C(Comprador)</label>
+     <input type="text" name="Tipo" id="typeId">
+      <label class="labelR">Edad</label>
+     <input type="text" name="Eda" id="ageId">
+      <label class="labelR">Correo Electronico</label>
+     <input type="text" name="Correo" id="emailId">
+     <label class="labelR">Dirección</label>
+     <input type="text" name="Dir" id="dirId">
+     <label class="labelR">Telefono</label>
+     <input type="text" name="Tel" id="telId">
+     <label class="labelR">Número de tarjeta</label>
+     <input type="text" name="NumT" id="numId">
+     <label class="labelR">Código de seguridad</label>
+     <input type="text" name="Cod" id="codId">
+      <label class="labelR">Fecha de vencimiento</label>
+     <input type="text" name="Fecha" id="dateId">
+  </div>
+
+   <div class="modal-footer"><!--If press the button, this call function save()-->
+      <button onclick="guardar( document.getElementById('nameId'), document.getElementById('userId'),document.getElementById('passId'),document.getElementById('cedId'),document.getElementById('typeId'),document.getElementById('ageId'),document.getElementById('emailId'),document.getElementById('dirId'),document.getElementById('telId'), document.getElementById('numId'),document.getElementById('codId'),document.getElementById('dateId'))"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="width: 160px">Registrarse</a></button>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function(){//call the id modal1
+        $('#modal1').modal();
+    });
+
+
+    // check if stored data from register-form is equal to entered data in the   login-form
+ 
+
+
+    </script>
+  <div>
+    <footer>@Copyright</footer>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Productos</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="css/cssPrincipal.css">
+  	<link rel="stylesheet" type="text/css" href="css/materialize.css">
+  	<link rel="stylesheet" type="text/css" href="css/materialize.css">
+ 	<script src="js/materialize.js" type="text/javascript"></script>
+  	<script src="js/javas.js" type="text/javascript"></script>
+  	<script src="js/materialize.min.js" type="text/javascript"></script>
+  	<style>
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+</style>
+</head>
+<body>
+ <!--Header of web page-->
+  <div id="divH">
+    <header>
+        <img src="img/logo.png" id="imgHeader">
+        <!--This label has the name user in section-->
+        <button class="labelName"><a href="#" id="userName"></a></button>
+     </header>
+  </div>
+  <script type="text/javascript">
+  //put the name in the menu bar
+    	var name = sessionStorage.getItem("actual");
+  		var vend = localStorage.getItem("vender");
+  		var comp = localStorage.getItem("comprar");
+  		ponerName(document.getElementById('userName'),name,vend,comp);
+  	</script>
+  <div>
+    <footer>@Copyright</footer>
+  </div>
+</body>
+</html>
