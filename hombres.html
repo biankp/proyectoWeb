@@ -23,19 +23,20 @@
 </style>
 </head>
 <body style="background-image: url(https://image.freepik.com/foto-gratis/fondo-borroso-cliente-en-el-cafe-desenfoque-de-fondo-con-bok_1356-94.jpg);">
-		<nav id="navegador">
+
+	<nav id="navegador">
       <img src="img/logo.png" id="imgHeader">
       <ul id="hola">
       	<li> <a href="" id="userName"></a></li>
       	<li> <a href="perfil.html">Start</a></li>
         <li> <a href="" id="des" onclick="desactiveAccount()">Desactive account</a></li>
-        <li> <a href="listaDeseos.html">List wish</a></li>
+        <li> <a href="listaDeseos.html">Wish list</a></li>
         <li> <a href="miCar-List.html">Car buy</a></li>
-        <li> <a href="" onclick="seeListCar('car')">Categories</a>
+        <li> <a href="">Categories</a>
           <ul>
             <li><a id="btn1" href="mujeres.html">Women</a></li>
             <li><a id="btn2" href="hombres.html">Men</a></li>
-            <li><a id="btn3" href="niños.html">Children</a></li>
+            <li><a id="btn3" href="ninos.html">Children</a></li>
           </ul>
         </li>
         <li> <a href="index.html">Exit</a></li>
@@ -45,35 +46,49 @@
     <br>
     <br>
     <br>
-
 	<div class="product">
-		<h1 style="font-family:Berkshire Swash">Products</h1>
+		<h3 style="font-family: Berkshire Swash">Products</h3>
 	</div>
 
-<div id="modalC" class="modal">
+	<div id="modalC" class="modal">
      <div class="modal-context" style="background-color: #F2FFFA  ">
-     	<p style="font-family: Abril Fatface; font-size: 20px" >Insert the quantity</p>
-	     <label class="labelR">Product quantity</label>
+     	<p style="font-family: Abril Fatface; font-size: 20px" >Insert the quantity of product to buy</p>
+	     <label class="labelR">Porduct quantity</label>
 	     <input type="text" name="Name" id="nameId">
   </div>
 
    <div class="modal-footer"><!--If press the button, this call function save()-->
-      <button onclick="addCar(document.getElementById('nameId'))"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="width: 160px">Buy Car</a></button>
+      <button onclick="addCar(document.getElementById('nameId'))"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="width: 160px">Buy car</a></button>
     </div>
  </div>
 
-<script type="text/javascript">
+	<script type="text/javascript">
+	verifiqueU(document.getElementById('userName'));
 
 	$(document).ready(function(){
-	   $(".product").click( loadProducts() );
+	   $(".product").click( loadProductsH() );
+	   $('#modalC').modal();
 	});
+	function loadProductsH() {
+		// stored data from the register-form
+		var code="";
+	    var pro = localStorage.getItem('product');
+	    
+	    var Jp = JSON.parse(pro);
+
+	    if (pro!=null) {
+		    for (var i = Jp.length - 1; i >= 0; i--) {
+		    	if(Jp[i].categoriaP == "hombres"){
+		    	code+="<div class=\"product2\"><div class=\"product3\"><a href=\"\"><img class=\"ima\" src="+Jp[i].imageP+"></a><div class=\"texto\"><h6>Producto: "+Jp[i].nameP+"</h6><h6>Price: "+Jp[i].priceP+"</h6><a id="+Jp[i].idP+" class=\"waves-effect waves-light btn modal-trigger\" href=\"\" onclick= \"toWish(this)\">Wish</a><a id="+Jp[i].idP+" class=\"waves-effect waves-light btn modal-trigger\" href=\"#modalC\">Buy</a></div></div></div>";
+	      		}
+		    }  
+		    $(".product").append(code);
+		}
+	}
+   verifiqueU(document.getElementById('userName'));
 
 
-     $(document).ready(function(){//call the id modal1
-    $('#modalC').modal();
-  });
-
-</script>
+	</script>
 
 </body>
 </html>

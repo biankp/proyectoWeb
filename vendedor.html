@@ -1,113 +1,112 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
- 
-	<link rel="stylesheet" type="text/css" href="css/cssPrincipal.css">
-	<script src="js/javas.js" type="text/javascript"></script>
-
-	<!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/cssPrincipal.css">
-  <link rel="stylesheet" type="text/css" href="css/materialize.css">
-  <link rel="stylesheet" type="text/css" href="css/materialize.css">
+  <title></title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/cssPrincipal.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
   <script src="js/materialize.js" type="text/javascript"></script>
-  <script src="js/javas.js" type="text/javascript"></script>
-  <script src="js/materialize.min.js" type="text/javascript"></script>
-  <style>
+    <script src="js/javas.js" type="text/javascript"></script>
+    <script src="js/materialize.min.js" type="text/javascript"></script>
+    <style>
     @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
   </style>
-	
-
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+  </style>
+  <style>
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+</style>
 </head>
-<body>
-
+<body style="background-image: url(https://image.freepik.com/foto-gratis/fondo-borroso-cliente-en-el-cafe-desenfoque-de-fondo-con-bok_1356-94.jpg);">
+   <nav id="navegador">
+      <img src="img/logo.png" id="imgHeader">
+      <ul id="hola">
+        <li> <a href="" id="userName"></a></li>
+        <li> <a href="perfil.html">Start</a></li>
+        <li> <a href="index.html">Exit</a></li>
+      </ul>
+    </nav>
   <div class="product">
-    <h3>Sus productos</h3>
+    <h3 style="font-family: Berkshire Swash">Your products</h3>
   </div>
-
-  <a class="waves-effect waves-light btn modal-trigger" href="#modalInsertar">Insertar</a>
+<!--agregar al otro proyecto-->
+ 
+<a class="waves-effect waves-light btn modal-trigger" href="#modalInsertar">Insert</a>
   <div id="modalInsertar" class="modal">
   <div class="modal-context" style="background-color: #F2FFFA  ">
-     <label class="labelR">Nombre del producto</label>
+     <label class="labelR">Product name</label>
      <input type="text" name="NameP" id="nameI" value="">
-      <label class="labelR">Precio</label>
+      <label class="labelR">Price</label>
      <input type="text" name="PriceP" id="priceI">
-      <label class="labelR">Cantidad</label>
+      <label class="labelR">Quantity</label>
      <input type="text" name="CantidadP" id="cantidadI">
-      <label class="labelR">Imagen</label>
+     <label class="labelR">Categorie(mujeres/hombres/niños)</label>
+     <input type="text" name="CategoriaP" id="categoriaI">
+     <label class="labelR">Description</label>
+     <input type="text" name="DescriptionP" id="descriptionI">
+      <label class="labelR">Image</label>
      <input type="text" name="ImageP" id="imageI">
   </div>
 
-  <div class="modal-footer"><!--If press the button, this call function save()-->
-    <button onclick="saveP(document.getElementById('nameI'), document.getElementById('priceI'), document.getElementById('cantidadI'), document.getElementById('imageI'))"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="width: 160px">Insertar</a></button>
+  <div class="modal-footer"><!--If press the button, this call function saveP()-->
+    <button onclick="saveP(document.getElementById('nameI'),document.getElementById('priceI'),document.getElementById('cantidadI'), document.getElementById('categoriaI'), document.getElementById('imageI'), document.getElementById('descriptionI'))"><a href="" class="modal-action modal-close waves-effect waves-green btn-flat" style="width: 160px">Insert</a></button>
   </div>
 </div>   
+<!--agregar al otro proyecto-->
 
 <div id="modalModificar" class="modal">
   <div class="modal-context" style="background-color: #F2FFFA  ">
-     <label class="labelR">Nombre del producto</label>
+     <label class="labelR">Product name</label>
      <input type="text" name="NameP" id="nameP" value="">
-      <label class="labelR">Precio</label>
+      <label class="labelR">Price</label>
      <input type="text" name="PriceP" id="priceP">
-      <label class="labelR">Cantidad</label>
+      <label class="labelR">Quantity</label>
      <input type="text" name="CantidadP" id="cantidadP">
-      <label class="labelR">Imagen</label>
+     <label class="labelR">Categorie</label>
+     <input type="text" name="CategoriaP" id="categoriaP">
+     <label class="labelR">Description</label>
+     <input type="text" name="DescriptionP" id="descriptionP">
+      <label class="labelR">Image</label>
      <input type="text" name="ImageP" id="imageP">
   </div>
 
   <div class="modal-footer"><!--If press the button, this call function save()-->
-    <button onclick="modificar(document.getElementById('nameP'),document.getElementById('cantidadP'),document.getElementById('cantidadP'),document.getElementById('imageP'))"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="width: 160px">Modificar</a></button>
+    <button onclick="modifique(document.getElementById('nameP'),document.getElementById('cantidadP'),document.getElementById('categoriaP'),document.getElementById('priceP'),document.getElementById('imageP'),document.getElementById('descriptionP'))"><a href="" class="modal-action modal-close waves-effect waves-green btn-flat" style="width: 160px">Edit</a></button>
   </div>
 </div>
 
 
+
+
+
+
+ 
+
 <div id="modalEliminar" class="modal">
   <div class="modal-context" style="background-color: #F2FFFA">
-    <h3>¿Esta seguro de eliminar este producto?</h3>
+    <h3>¿Are you safe that you want delete this product?</h3>
     <img id="imageE" src="">
-    <label class="labelR">Nombre del producto</label>
+    <label class="labelR">Product name</label>
     <input type="text" name="NameP" id="nameE" value="">
   </div>
 
   <div class="modal-footer"><!--If press the button, this call function save()-->
-    <button onclick="eliminar()"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="width: 160px">Aceptar</a></button>
-    <button><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="width:160px">Cancelar</a></button>
+    <button onclick="deleteP()"><a href="" class="modal-action modal-close waves-effect waves-green btn-flat" style="width: 160px">Accept</a></button>
+    <button><a href="" class="modal-action modal-close waves-effect waves-green btn-flat" style="width:160px">Cancel</a></button>
   </div>
 </div>
 
 <script type="text/javascript">
-  var temp="";
 
   $(document).ready(function(){
     $(".product").click(loadProductsVe());
-  });
-
-  $(document).ready(function(){//call the id modal1
     $('#modalInsertar').modal();
-  });
-
-  $(document).ready(function(){//call the id modal1
     $('#modalModificar').modal();
-  });
-
-  $(document).ready(function(){//call the id modal1
     $('#modalEliminar').modal();
   });
   

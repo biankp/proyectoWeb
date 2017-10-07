@@ -14,34 +14,45 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 </style>
 </head>
-<body>
-	 <div id="divH">
-    <header>
-        <img src="img/logo.png" id="imgHeader">
-        <!--This label has the name user in section-->
-        <button class="labelName"><a href="" id="userName"></a></button>
-        <button class="labelName" id="des" onclick="desactivarCuenta()">Desactivar Cuenta</button>
-     </header>
-  </div>
+<body style="background-image: url(http://68.media.tumblr.com/a6567bced14e354d283dcccfdeec757d/tumblr_inline_mpu04emtVE1qz4rgp.png);">
+	 <nav id="navegador">
+      <img src="img/logo.png" id="imgHeader">
+      <ul id="hola">
+        <li> <a href="" id="userName"></a></li>
+        <li> <a href="perfil.html">Start</a></li>
+        <li id="des"> <a href=""  onclick="desactiveAccount()">Account desactive</a></li>
+        <li id="list"> <a href="listaDeseos.html">Wish List</a></li>
+        <li  id="car"> <a href="miCar-List.html" onclick="seeListCar('car')">Car buy</a></li>
+        <li> <a href="">Categories</a>
+          <ul>
+            <li><a id="btn1" href="mujeres.html">Women</a></li>
+            <li><a id="btn2" href="hombres.html">Men</a></li>
+            <li><a id="btn3" href="ninos.html">Children</a></li>
+          </ul>
+        </li>
+        <li> <a href="index.html">Exit</a></li>
+      </ul>
+    </nav>
+
     <div>
     <!--show the user profile-->
       <img src="img/perfil.jpg" class="imgPerfil">
       <br>
-      <div id="general">
+      <div id="general" style="background-image: url(http://68.media.tumblr.com/a6567bced14e354d283dcccfdeec757d/tumblr_inline_mpu04emtVE1qz4rgp.png);">
       <div class="divPerfil" ">
-        <label class="tituloPerfil" >Nombre Completo:</label>
+        <label class="tituloPerfil" >Full Name:</label>
         <label id="nombre" class="letraPerfil5"></label>
         <br>
         <br>
-         <label class="tituloPerfil">Nombre de usuario:</label>
+         <label class="tituloPerfil">User Name:</label>
         <label id="nombreU"  class="letraPerfil5"></label>
         <br>
         <br>
-        <label class="tituloPerfil">Contraseña:</label>
+        <label class="tituloPerfil">Password:</label>
         <label id="password"  class="letraPerfil3"></label>
         <br>
         <br>
-         <label class="tituloPerfil">Cédula:</label>
+         <label class="tituloPerfil">ID:</label>
         <label id="cedula"  class="letraPerfil4"></label>
         <br>
         <br>
@@ -78,50 +89,93 @@
     </div>
   </div>
   </div>
-  <!--<a  class="waves-effect waves-light btn modal-trigger" id="des" onclick="desactivarCuenta()">Desactivar Cuenta</a>-->
-    <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="editar" onclick="cargarInfo(document.getElementById('nameId'), document.getElementById('userId'),document.getElementById('passId'),document.getElementById('cedId'),document.getElementById('ageId'),document.getElementById('emailId'),document.getElementById('dirId'),document.getElementById('telId'), document.getElementById('numId'),document.getElementById('codId'),document.getElementById('dateId'))" ></a>
+  <!--<a  class="waves-effect waves-light btn modal-trigger" id="des" onclick="desactiveAccount()">Desactivar Cuenta</a>-->
+  <!--............This function edit or add product-->
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="editar" onclick="loadInfo(document.getElementById('nameId'), document.getElementById('userId'),document.getElementById('passId'),document.getElementById('cedId'),document.getElementById('ageId'),document.getElementById('emailId'),document.getElementById('dirId'),document.getElementById('telId'), document.getElementById('numId'),document.getElementById('codId'),document.getElementById('dateId'))" ></a>
+
+    <!--This button anly show if is user seller, show information of consults-->
+     <a class="waves-effect waves-light btn modal-trigger" href="#consultasModal" id="consult" onclick="" >Consults</a>
+
+    <!--................In this section show it the information of user that want to edit.............-->
   <div id="modal1" class="modal">
   <div class="modal-context" style="background-color: #F2FFFA  ">
-     <h2 style="font-family: 'Fredoka One'">Editar información*</h2>
-     <label class="labelR">Nombre Completo</label>
+     <h2 style="font-family: 'Fredoka One'">Information Edit*</h2>
+     <label class="labelR">Full Name</label>
      <input type="text" name="Name" id="nameId">
-     <label class="labelR">Nombre de usuario </label>
+     <label class="labelR">User Name </label>
      <input type="text" name="NameU" id="userId">
-      <label class="labelR">Contraseña</label>
+      <label class="labelR">Password</label>
      <input type="text" name="Pass" id="passId">
-      <label class="labelR">Cédula</label>
+      <label class="labelR">ID</label>
      <input type="text" name="Ced" id="cedId">
-      <label class="labelR">Edad</label>
+      <label class="labelR">Age</label>
      <input type="text" name="Eda" id="ageId">
-      <label class="labelR">Correo Electronico</label>
+      <label class="labelR">Email</label>
      <input type="text" name="Correo" id="emailId">
-     <label class="labelR">Dirección</label>
+     <label class="labelR">Direction</label>
      <input type="text" name="Dir" id="dirId">
-     <label class="labelR">Telefono</label>
+     <label class="labelR">Telephone Number</label>
      <input type="text" name="Tel" id="telId">
-     <label class="labelR">Número de tarjeta</label>
+     <label class="labelR">Target Number</label>
      <input type="text" name="NumT" id="numId">
-     <label class="labelR">Código de seguridad</label>
+     <label class="labelR">Segurity code</label>
      <input type="text" name="Cod" id="codId">
-      <label class="labelR">Fecha de vencimiento</label>
+      <label class="labelR"> Due date</label>
      <input type="text" name="Fecha" id="dateId">
      <script type="text/javascript">
      </script>
   </div>
-   <div class="modal-footer"><!--If press the button, this call function save()-->
-      <button onclick="editarInfo( document.getElementById('nameId'), document.getElementById('userId'),document.getElementById('passId'),document.getElementById('cedId'),document.getElementById('ageId'),document.getElementById('emailId'),document.getElementById('dirId'),document.getElementById('telId'), document.getElementById('numId'),document.getElementById('codId'),document.getElementById('dateId'))"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="width: 160px">Cambiar</a></button>
+   <div class="modal-footer"><!--If press the button, this call function editInfo()-->
+      <button onclick="editInfo( document.getElementById('nameId'), document.getElementById('userId'),document.getElementById('passId'),document.getElementById('cedId'),document.getElementById('ageId'),document.getElementById('emailId'),document.getElementById('dirId'),document.getElementById('telId'), document.getElementById('numId'),document.getElementById('codId'),document.getElementById('dateId'))"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="width: 160px">Cambiar</a></button>
     </div>
   </div>
+
+<!--Div for do consult-->
+<div id="consultasModal" class="modal">
+  <div class="modal-context" style="background-color: #F2FFFA  ">
+     <h4 style="font-family: 'Fredoka One'">Consults</h4>
+     <label class="labelR">User with more products</label>
+     <label id="masP">User</label>
+      <br>
+     <button id="btnMasP" class="dis" onclick="moreProducts(document.getElementById('masP'))">Consultar</button>
+     <br>
+     <br>
+     <label class="labelR">User with less products: </label>
+     <label id="menosP">User</label>
+      <br>
+     <button id="btnMenosP" class="dis" onclick="lessProducts(document.getElementById('menosP'))">Consultar </button>
+     <br>
+     <br>
+      <label class="labelR">User with less cash inverted:</label>
+     <label id="menosD">User</label>
+      <br>
+     <button id="btnMenosD" class="dis" onclick="lessMoney(document.getElementById('menosD'))">Consultar</button>
+     <br>
+     <br>
+      <label class="labelR">User with less cash inverted:</label>
+     <label id="masD">User</label>
+      <br>
+     <button id="btnMasD" class="dis" onclick="moreCash(document.getElementById('masD'))">Consultar</button>
+     <br>
+     <br>
+  </div>
+   <div class="modal-footer"><!--If press the button, this call function editInfo()-->
+      <button><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="width: 160px">Cerrar</a></button>
+    </div>
+  </div>
+
+
+
 	<script type="text/javascript">
     $(document).ready(function(){//call the id modal1
         $('#modal1').modal();
+        $('#consultasModal').modal();
     });
-    verificarU(document.getElementById('userName'));
-    cargarPerfil(document.getElementById('nombre'),document.getElementById('nombreU'),document.getElementById('password'),document.getElementById('cedula'),document.getElementById('edad'),document.getElementById('correo'),document.getElementById('direccion'),document.getElementById('telefono'),document.getElementById('tarjeta'),document.getElementById('codigo'),document.getElementById('fechaa'),document.getElementById('e'),document.getElementById('c'),document.getElementById('d'),document.getElementById('t'),document.getElementById('ta'),document.getElementById('co'),document.getElementById('fe'), document.getElementById('editar'),'parte2','des');
-
-
-
-
+    //charge the userName en the header
+    verifiqueU(document.getElementById('userName'));
+    
+    //charge de userPerfil in the respective text fields
+    cargeProfile(document.getElementById('nombre'),document.getElementById('nombreU'),document.getElementById('password'),document.getElementById('cedula'),document.getElementById('edad'),document.getElementById('correo'),document.getElementById('direccion'),document.getElementById('telefono'),document.getElementById('tarjeta'),document.getElementById('codigo'),document.getElementById('fechaa'),document.getElementById('e'),document.getElementById('c'),document.getElementById('d'),document.getElementById('t'),document.getElementById('ta'),document.getElementById('co'),document.getElementById('fe'), document.getElementById('editar'),'parte2','des','car','list','consult','parte2');
 
 	</script>
 	<div>

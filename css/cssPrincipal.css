@@ -1,19 +1,19 @@
+/*--------------------------Style for header--------------------*/
 header{
   background: black;
   width: 100%;
   height : 162px ;
   position: fixed;
 }
-footer{
-  background: black;
-  color: white;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
+.logRe{
   text-align: center;
+  font-family: Fredoka One;
+   color: white;
 }
+.change2{
+  background-image: url(http://68.media.tumblr.com/a6567bced14e354d283dcccfdeec757d/tumblr_inline_mpu04emtVE1qz4rgp.png);
+}
+
 #imgHeader{
   height: 150px; 
   width: 250px; 
@@ -22,6 +22,90 @@ footer{
   height: 150px; 
   width: 250px; 
 }
+#navegador {
+  background: black;
+  width: 1382px;
+  height: 180px;
+  margin: -16px;
+}
+
+#navegador li{
+  float: left;
+  font-family: Arial, sans-serif;
+  font-size: 16px;}
+
+#navegador li a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+}
+
+#navegador li a:hover{
+  background: #7C6363;
+}
+
+#navegador ul {
+ list-style:none;
+ margin-left: 5%;
+ display: inline-block
+}
+
+#navegador #hola {
+ margin-top: 115px;
+}
+
+#navegador ul li {
+ position:relative;
+ float:left;
+ margin:0;
+ padding:0;
+}
+
+#navegador ul ul {
+ display:none;
+ position:absolute;
+ background:#eee;
+
+}
+
+#navegador ul ul li {
+ float:none;
+ width:150px;
+ line-height:40px;
+}
+
+#navegador ul ul a {
+ line-height:120%;
+ padding:5px 15px;
+ color: black;}
+
+#navegador ul li:hover > ul {
+ display:block;
+}
+
+#imageCa{
+height: 195px;
+width: 180px;
+
+
+}
+/*------------------style for show the price to pay*/
+.precio{
+  font-size: 20px;
+}
+/*--------------------------style footer*/
+footer{
+  background-color: black;
+  color: white;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  position: absolute;
+}
+
+/*---------------------------Style register*/
 #general{
   margin-left: 200px
 }
@@ -30,17 +114,25 @@ footer{
   color: black;
   font-family: 'Amaranth';
 }
+.dis{
+  margin-left: 25px
+}
+
+
 .labelName{
   color: #4BA07F;
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'Abril Fatface';
   background-color: black;
   border-color: black;
+  padding-left: 25px
 
 }
+
 button a{
   color: #4BA07F;
 }
+/**----------------------------Style user profile*/
 .imgPerfil{
   padding: 30px;
   height: 200px;
@@ -104,7 +196,7 @@ button a{
   padding:10px;
 
 }
-
+/*--------------------------------Style for product page*/
 .menuProducts{
   float: right;
   margin-top: 10px;
@@ -128,12 +220,7 @@ button a{
   vertical-align:top;
   overflow:hidden;
 }
-.divU{
-  background-color: white;
-}
-.ocultarB{
-  display: none;
-}
+
 
 .product3{
   width:250px;
@@ -156,4 +243,11 @@ button a{
 .texto{
 height:auto;
 margin-left: 25px;
+}
+/*---------------------------Style for hide some element(button, label, div)*/
+.divU{
+  background-color: white;
+}
+.ocultarB{
+  display: none;
 }

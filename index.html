@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Inicio</title>
+  <title>Start</title>
   <!--This section import files -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/cssPrincipal.css">
@@ -18,16 +18,36 @@
   @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
   </style>
   </style>
+  <style>
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+</style>
 
 </head>
 <body>
   <!--Header of web page-->
-  <div id="divH">
-    <header>
-        <img src="img/logo.png" id="imgHeader">
-    </header>
+
+  <nav id="navegador">
+      <img src="img/logo.png" id="imgHeader">
+      <ul id="hola">
+        <li><a class="waves-effect waves-light btn modal-trigger" href="#modalL" style="height: 54px; width: 153px; background-color: black" >Start</a></li>
+      </ul>
+  </nav>
+
+  <h2 style="text-align: center;font-family: Berkshire Swash">Welcome to Hera!!</h2>
+    <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="https://i.pinimg.com/736x/68/d1/83/68d183cca6d4c729f398d48f7c80b48f--harry-potter-sweater-ropa-harry-potter.jpg" id="imageCa"></a>
+    <a class="carousel-item" href="#two!"><img src="https://s8.favim.com/orig/72/beautiful-fashion-flowers-jeans-Favim.com-705806.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="https://www.decathlon.co.uk/media/836/8369872/classic_fc4b8736d2964e038da94289c3e376d7.jpg"></a>
+    <a class="carousel-item" href="#four!"><img src="https://sses.tidebuy.com/images/product/c/102097/12651/12651468_1.jpeg"></a>
+     <a class="carousel-item" href="#five!"><img src="http://zapatosdeportivosparadamas.com/wp-content/uploads/2016/08/modelos-de-ropa-para-ni%C3%B1as-de-6-a%C3%B1os.jpg"></a>
+
   </div>
-  <div class="container">
+
+
+<div id="modalL" class="modal" style="background-image: url(http://img14.deviantart.net/35c9/i/2010/292/2/3/soothing_discharge_by_heroshade-d312sxh.jpg);">
+  <div class="modal-context" style="background-color: #F2FFFA  ">
+    <div class="container" id="log">
+    <h3 class="logRe">Login</h3>
     <div class="row">
         <div class="col m6">
         </div>
@@ -36,22 +56,24 @@
                 <form class="col s12">
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="email" type="email" class="validate">
+                            <input id="email" type="email" style="color: white" class="validate">
                             <label for="email">Username</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="pass" type="password" class="validate">
+                            <input id="pass" type="password" style="color: white"  class="validate">
                             <label for="pass">Password</label>
                         </div>
                     </div>
-                    <div class="divider"></div>
                     <div class="row">
                         <div class="col m12">
                             <p class="right-align">
-                                <button id="login" class="btn btn-large waves-effect waves-light" type="button" name="action" onclick="check()">Login</button>
-                                  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Registrarse</a>
+                                <button id="login" class="btn btn-large waves-effect waves-light" type="button" name="action" onclick="check('activar','Nota')" style="width: 150px">Login</button>
+                                <br>
+                                <br>
+                                  <a  class="waves-effect waves-light btn modal-trigger" href="#modal1" style="height: 54px; width: 153px" > Register</a>
+            
                             </p>
                         </div>
                     </div>
@@ -59,59 +81,89 @@
             </div>
         </div>
     </div>
-</div>
-
+    <pre id="Nota" class="ocultarB" style="color: white"><strong>Your account are desactive!!. 
+ If  you wish recover you account ingress you user name
+  and password, letter press "Active account"</strong></pre>
+ <a  onclick="check2('activar','Nota')" id="activar" class="ocultarB" href="#modalActivar" style="height: 54px" >Active account</a>
+    </div>
+  </div>
 
 <!--This section shows the register of user. Implement MATERIALIZE for show a emergent window-->
   
   <div id="modal1" class="modal">
   <div class="modal-context" style="background-color: #F2FFFA  ">
      <h2 style="font-family: 'Fredoka One'">Nota*</h2>
-     <pre style="color: red">Si usted es usuario vendedor por favor solo llene los primeros 5 campos</pre>
-     <label class="labelR">Nombre Completo</label>
+     <pre style="color: red"> If you are seller user, please only complete the first 5 fiel</pre>
+     <label class="labelR">Full Name</label>
      <input type="text" name="Name" id="nameId">
-     <label class="labelR">Nombre de usuario </label>
+     <label class="labelR">User name </label>
      <input type="text" name="NameU" id="userId">
-      <label class="labelR">Contraseña</label>
+      <label class="labelR">Password</label>
      <input type="text" name="Pass" id="passId">
-      <label class="labelR">Cédula</label>
+      <label class="labelR">ID</label>
      <input type="text" name="Ced" id="cedId">
-      <label class="labelR">Tipo de usuario... Digite V(Vendedor) ó C(Comprador)</label>
+      <label class="labelR">User tyoe... Digite S(Seller) ó B(Buyer)</label>
      <input type="text" name="Tipo" id="typeId">
-      <label class="labelR">Edad</label>
+      <label class="labelR">Age</label>
      <input type="text" name="Eda" id="ageId">
-      <label class="labelR">Correo Electronico</label>
+      <label class="labelR">Email</label>
      <input type="text" name="Correo" id="emailId">
-     <label class="labelR">Dirección</label>
+     <label class="labelR">Direction</label>
      <input type="text" name="Dir" id="dirId">
-     <label class="labelR">Telefono</label>
+     <label class="labelR">Telephono</label>
      <input type="text" name="Tel" id="telId">
-     <label class="labelR">Número de tarjeta</label>
+     <label class="labelR">Target Number</label>
      <input type="text" name="NumT" id="numId">
-     <label class="labelR">Código de seguridad</label>
+     <label class="labelR">Segurity Code</label>
      <input type="text" name="Cod" id="codId">
-      <label class="labelR">Fecha de vencimiento</label>
+      <label class="labelR">Due date</label>
      <input type="text" name="Fecha" id="dateId">
   </div>
 
    <div class="modal-footer"><!--If press the button, this call function save()-->
-      <button onclick="guardar( document.getElementById('nameId'), document.getElementById('userId'),document.getElementById('passId'),document.getElementById('cedId'),document.getElementById('typeId'),document.getElementById('ageId'),document.getElementById('emailId'),document.getElementById('dirId'),document.getElementById('telId'), document.getElementById('numId'),document.getElementById('codId'),document.getElementById('dateId'))"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="width: 160px">Registrarse</a></button>
+      <button onclick="save( document.getElementById('nameId'), document.getElementById('userId'),document.getElementById('passId'),document.getElementById('cedId'),document.getElementById('typeId'),document.getElementById('ageId'),document.getElementById('emailId'),document.getElementById('dirId'),document.getElementById('telId'), document.getElementById('numId'),document.getElementById('codId'),document.getElementById('dateId'))"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Register</a></button>
+      <button> <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a></button>
     </div>
   </div>
   <script>
     $(document).ready(function(){//call the id modal1
         $('#modal1').modal();
     });
-
+    $(document).ready(function(){//call the id modal1
+        $('#modalL').modal();
+    });
+    //localStorage.removeItem('vender');
 
     // check if stored data from register-form is equal to entered data in the   login-form
- 
+      $(document).ready(function(){
+      $('.carousel').carousel();
+    });
+      /*localStorage.removeItem('deseo');
+      localStorage.removeItem('car');
+      localStorage.removeItem('product');
+      localStorage.removeItem('vender');
+      localStorage.removeItem('comprar');
+      localStorage.removeItem('historial');*/
+      
+/*      
+    usersDefault("Ana","Anna","1234","2-01234-05678","V","30","anita@gmail.com","calle patito","8888-8888","hola","06/10/2017");
+    usersDefault("Juan","Juanca","1234","2-01234-05678","V","30","anita@gmail.com","calle patito","8888-8888","hola","06/10/2017");
+    usersDefault("Sara","Sarita","1234","2-01234-05678","C","30","anita@gmail.com","calle patito","8888-8888","hola","06/10/2017");
+    usersDefault("Maria","Mari","1234","2-01234-05678","C","30","anita@gmail.com","calle patito","8888-8888","hola","06/10/2017");
 
 
+    savePDefault("Vestido","3000","30","mujeres","https://i2.linio.com/p/92884ca5de566e0d0b08eeae25458b18-catalog.jpg","Flores","Anna");
+    savePDefault("Blusa","3000","30","mujeres","https://ae01.alicdn.com/kf/HTB1btXqIFXXXXXoaXXXq6xXFXXX9/Summer-Style-Womens-Tops-Fashion-2015-Vintage-Lace-Slim-Casual-Party-Tank-Shirt-Tops-T-Shirt.jpg","Lisa","Juanca");
+    savePDefault("Abrigo","3000","30","hombres","https://gloimg.gbtcdn.com/gb/pdm-product-pic/Electronic/2017/06/29/goods-img/1500612250979327566.jpg","Gris","Anna");
+    savePDefault("Camisa","3000","30","hombres","https://dhb3yazwboecu.cloudfront.net/981//productos/DH7983/M_DH7983_1ZH_01.jpg","Rayas","Juanca");
+
+    savePDefault("Entero","3000","30","ninos","http://okbebe.com/wp-content/uploads/2015/08/Ropa-para-nino-carters-118A070.jpg","Rayas","Anna");
+    savePDefault("Vestido","3000","30","ninos","http://www.hoymoda.com/wp-content/uploads/2012/04/ropa-infantil-oscar-de-la-renta-5-2.jpg","Flores","Juanca");
+          
+      
+   */   
+      
     </script>
-  <div>
-    <footer>@Copyright</footer>
-  </div>
 
 </body>
 </html>
